@@ -11,7 +11,7 @@ class App extends Component {
   componentWillMount() {
     // this.props.fetchWeather('Austin');
     // this.props.fetchForecast('Austin');
-    // this.props.fetchWeatherForecast('Austin');
+    this.props.fetchWeatherForecast('Austin');
     // this.props.fetchWeatherForecast('Laredo');
   }
 
@@ -43,8 +43,8 @@ function mapStateToProps(state) {
 }
 
 
-// export default connect(mapStateToProps, { fetchWeatherForecast })(App);
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { fetchWeatherForecast })(App);
+// export default connect(mapStateToProps)(App);
 
 // export default connect(mapStateToProps, { fetchForecast })(App);
 // export default connect(mapStateToProps, { fetchWeather })(App);
